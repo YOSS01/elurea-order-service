@@ -1,5 +1,6 @@
 package com.elurea.order_service.entity;
 
+import com.elurea.order_service.enums.PaymentMethod;
 import com.elurea.order_service.enums.Status;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -30,6 +31,10 @@ public class Order {
 
     @Column(nullable = false)
     private String phoneNumber;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private PaymentMethod paymentMethod = PaymentMethod.ONLINE;
 
     @Column(nullable = false)
     private float totalPrice = 0;
