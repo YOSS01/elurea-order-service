@@ -104,6 +104,14 @@ public class Order {
         this.phoneNumber = phoneNumber;
     }
 
+    public PaymentMethod getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(PaymentMethod paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
+
     public float getTotalPrice() {
         return totalPrice;
     }
